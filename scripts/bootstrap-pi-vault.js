@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import fs from "node:fs";
-import os from "node:os";
-import path from "node:path";
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
 
-const SCRIPT_DIR = path.dirname(new URL(import.meta.url).pathname);
+const SCRIPT_DIR = __dirname;
 const REPO_DIR = path.resolve(SCRIPT_DIR, "..");
 const MANIFEST_PATH = path.join(REPO_DIR, "docs", "pi-vault.bootstrap.json");
 
